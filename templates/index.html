@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Color Recommender</title>
+</head>
+<body>
+    <h1>Color Recommender</h1>
+    <form action="/recommend" method="post">
+        <label for="color_name">Enter color name:</label>
+        <input list="color_names" id="color_name" name="color_name" placeholder="e.g., Alice Blue">
+        <datalist id="color_names">
+            {% for color in color_names %}
+                <option value="{{ color }}">{{ color }}</option>
+            {% endfor %}
+        </datalist>
+        <button type="submit">Recommend Colors</button>
+    </form>
+</body>
+</html>

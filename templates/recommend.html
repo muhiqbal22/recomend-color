@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Color Recommendations</title>
+</head>
+<body>
+    <h1>Recommended Colors for {{ color_name }}</h1>
+    <ul>
+        {% for color in recommended_colors %}
+        <li>{{ color['color_name'] }} ({{ color['color_code'] }})</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Back to Home</a>
+</body>
+</html>
